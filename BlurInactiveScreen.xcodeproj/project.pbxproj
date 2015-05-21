@@ -14,6 +14,7 @@
 		4FD299C01B0DFA7A00ADFDB9 /* BlurInactiveScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD299BF1B0DFA7A00ADFDB9 /* BlurInactiveScreenTests.swift */; };
 		4FD299CA1B0E07C800ADFDB9 /* AppDelegateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD299C91B0E07C800ADFDB9 /* AppDelegateExtention.swift */; };
 		4FD299CC1B0E0BF100ADFDB9 /* BlurScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD299CB1B0E0BF100ADFDB9 /* BlurScreenViewController.swift */; };
+		4FD299CE1B0E159F00ADFDB9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4FD299CD1B0E159F00ADFDB9 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4FD299BF1B0DFA7A00ADFDB9 /* BlurInactiveScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurInactiveScreenTests.swift; sourceTree = "<group>"; };
 		4FD299C91B0E07C800ADFDB9 /* AppDelegateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateExtention.swift; sourceTree = "<group>"; };
 		4FD299CB1B0E0BF100ADFDB9 /* BlurScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurScreenViewController.swift; sourceTree = "<group>"; };
+		4FD299CD1B0E159F00ADFDB9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		4FD2999B1B0DFA7900ADFDB9 = {
 			isa = PBXGroup;
 			children = (
+				4FD299CD1B0E159F00ADFDB9 /* README.md */,
 				4FD299A61B0DFA7900ADFDB9 /* BlurInactiveScreen */,
 				4FD299BC1B0DFA7900ADFDB9 /* BlurInactiveScreenTests */,
 				4FD299A51B0DFA7900ADFDB9 /* Products */,
@@ -217,6 +220,7 @@
 			files = (
 				4FD299CA1B0E07C800ADFDB9 /* AppDelegateExtention.swift in Sources */,
 				4FD299CC1B0E0BF100ADFDB9 /* BlurScreenViewController.swift in Sources */,
+				4FD299CE1B0E159F00ADFDB9 /* README.md in Sources */,
 				4FD299AA1B0DFA7900ADFDB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
