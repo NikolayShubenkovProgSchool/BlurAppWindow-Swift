@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Blur Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BlurScreenViewController" customModule="BlurInactiveScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,7 +16,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assume this view have some private data. Just press home button twice to see that snapshot of view will disappear" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83m-xT-UNt">
+                                <rect key="frame" x="25" y="20" width="551" height="93"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfg-xX-71K">
+                                <rect key="frame" x="16" y="121" width="274" height="459"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JH-eL-a1x">
+                                        <rect key="frame" x="82" y="215" width="111" height="30"/>
+                                        <state key="normal" title="Blur For A While">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="blurButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmT-8b-V5i"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.90588235289999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="3JH-eL-a1x" secondAttribute="centerX" id="Nm1-ro-dfD"/>
+                                    <constraint firstAttribute="centerY" secondItem="3JH-eL-a1x" secondAttribute="centerY" id="aBv-Qg-JMa"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1M-UN-QKU">
+                                <rect key="frame" x="310" y="121" width="274" height="459"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.29803921570000003" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="K1M-UN-QKU" firstAttribute="height" secondItem="Vfg-xX-71K" secondAttribute="height" id="0p6-ld-kWW"/>
+                            <constraint firstItem="Vfg-xX-71K" firstAttribute="top" secondItem="83m-xT-UNt" secondAttribute="bottom" constant="8" id="49b-Fa-A5o"/>
+                            <constraint firstAttribute="centerX" secondItem="83m-xT-UNt" secondAttribute="centerX" constant="-0.5" id="9OM-lw-OGe"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="83m-xT-UNt" secondAttribute="trailing" constant="20" id="AqD-eX-9zh"/>
+                            <constraint firstItem="83m-xT-UNt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Bt3-Gh-2La"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vfg-xX-71K" secondAttribute="bottom" constant="20" id="XK9-Bl-Qpn"/>
+                            <constraint firstItem="K1M-UN-QKU" firstAttribute="width" secondItem="Vfg-xX-71K" secondAttribute="width" id="ZWq-BJ-2P4"/>
+                            <constraint firstAttribute="trailing" secondItem="K1M-UN-QKU" secondAttribute="trailing" constant="16" id="g64-ok-foN"/>
+                            <constraint firstItem="Vfg-xX-71K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="hCh-3h-DqL"/>
+                            <constraint firstItem="K1M-UN-QKU" firstAttribute="top" secondItem="Vfg-xX-71K" secondAttribute="top" id="rhK-UI-3Tp"/>
+                            <constraint firstItem="83m-xT-UNt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="tqv-un-JH9"/>
+                            <constraint firstItem="K1M-UN-QKU" firstAttribute="leading" secondItem="Vfg-xX-71K" secondAttribute="trailing" constant="20" id="wjs-3x-Hjh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
